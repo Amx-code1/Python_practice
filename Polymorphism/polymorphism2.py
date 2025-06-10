@@ -17,9 +17,9 @@ class Archer(user):
     def attack(self):
         print(f'attacking with arrows: arrows-left - {self.num_arrows}')
 
-Wizard1 =Wizard('Merlin',50)
-Archer1 =Archer('Robin', 100)
+Wizard1 =Wizard('Merlin',60)
+Archer1 =Archer('Robin', 30)
 # print(Wizard1)
-Wizard1.attack()
-Archer1.attack()
-print(isinstance(Wizard1,Wizard))
+
+for char  in [Wizard1,Archer1]:
+    char.attack()

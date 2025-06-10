@@ -2,6 +2,9 @@ class user:
     def sign_in(self):
         print('logged in')
         
+    def attack(self):# this is overwrited in output 
+        print('do nothing')
+        
 class Wizard(user):
     def __init__(self,name,power):
         self.name = name
@@ -17,9 +20,8 @@ class Archer(user):
     def attack(self):
         print(f'attacking with arrows: arrows-left - {self.num_arrows}')
 
-Wizard1 =Wizard('Merlin',50)
-Archer1 =Archer('Robin', 100)
+Wizard1 =Wizard('Merlin',60)
+Archer1 =Archer('Robin', 30)
 # print(Wizard1)
-Wizard1.attack()
-Archer1.attack()
-print(isinstance(Wizard1,Wizard))
+
+print(Wizard1.attack())
